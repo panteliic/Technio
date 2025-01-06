@@ -60,59 +60,58 @@ nav {
   width: 100%;
   z-index: 999;
   top: 0;
+
 }
 nav div {
   display: flex;
   justify-content: space-between;
+  padding: 0.5em;
 }
 nav ul {
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
-.nav-link {
+nav a {
   color: var(--background);
   font-size: 1.3em;
   font-weight: 500;
   position: relative;
+  text-decoration: none;
+  height: 100%;
+  padding: 0 0.4em ;
 }
-.nav-link:hover {
+nav a:hover {
   color: white;
 }
-.nav-link:hover::after,
-.nav-link.active::after {
+nav a:hover::after,
+nav a.active::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 7px;
+  height: 8px;
   background-color: var(--background);
   left: 0;
-  bottom: -16px;
+  bottom: -26.1px;
 }
-.nav-link.active {
+nav a.active {
   color: var(--background) !important;
 }
-.nav-link.remove-line:hover::after {
+nav a.remove-line:hover::after {
   height: 0;
 }
-.nav-link:active {
-  color: var(--background);
+
+.nav-btn {
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
 }
-.navbar-toggler {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  padding: 5px;
-  border: 0;
-}
-.navbar-toggler:focus {
-  border: 0;
-}
-.navbar-toggler .line {
-  width: 30px;
-  height: 2px;
-  background-color: var(--background);
-}
+
+
 .hero {
   align-items: center;
   justify-content: space-between;
@@ -379,7 +378,7 @@ footer section {
   background-color: var(--primary);
   padding: 10px;
   border-radius: var(--radius);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .contact button:hover {
   opacity: 0.7;
@@ -402,13 +401,13 @@ footer section {
   font-size: 1.3em;
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap: 5px;
 }
 .mapasajta ul li a {
-  color:var(--ring);
+  color: var(--ring);
   text-decoration: none;
 }
-.faq{ 
+.faq {
   margin-top: 4%;
   padding: 2em 0;
 }
@@ -427,10 +426,10 @@ footer section {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: var(--primary); 
-  color: var(--primary-foreground); /
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   outline: none;
-  border: 0; 
+  border: 0;
 }
 
 .accordion-header {
@@ -453,7 +452,34 @@ footer section {
   outline: none;
 }
 
+.thankyou {
+  margin-top: 4em;
+  padding: 2em 0;
+}
 
+.thankyou .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thankyou h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.thankyou p {
+  font-size: 1.2em;
+  color: var(--foreground);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.thankyou a {
+  color: var(--primary);
+  font-weight: 900;
+  text-decoration: none;
+}
 @media screen and (max-width: 1200px) {
   .hero h1 {
     font-size: 3.5em;
@@ -475,12 +501,56 @@ footer section {
   .after-hero h4 {
     font-size: 1em;
   }
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    padding: 1em;
+    top: 0;
+    right: 0;
+    background-color: var(--primary);
+    z-index: 999;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    gap: 10px;
+  }
+  nav a:hover::after,
+  nav a.active::after {
+    height: 0;
+  }
+  .close-btn {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+ nav ul li .remove-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+  nav ul.open {
+    transform: translateX(0);
+  }
+  nav button {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero {
     height: auto;
     text-align: center;
     margin-top: 5em;
+  }
+  nav ul {
+    width: 100%;
   }
   .hero h1 {
     font-size: 3em;
