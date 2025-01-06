@@ -277,6 +277,7 @@ footer section {
 .onama {
   padding: 1em 0;
   margin-top: 8vh;
+  margin-bottom: 10px;
 }
 .about-us {
   justify-content: space-between;
@@ -286,6 +287,13 @@ footer section {
 }
 .onama p {
   font-size: 1.2em;
+}
+.stampaj {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
 }
 .gallery {
   display: grid;
@@ -342,12 +350,15 @@ footer section {
 }
 .contact {
   margin-top: 6em;
+  padding: 1em 0;
 }
 .contact-info {
   background-color: white;
   padding: 1em;
   margin-bottom: 10px;
   border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
 }
 .contact-info a {
   color: var(--foreground);
@@ -383,6 +394,66 @@ footer section {
   color: var(--foreground);
   resize: vertical;
 }
+.mapasajta {
+  margin-top: 9vh;
+  padding: 2em 0;
+}
+.mapasajta ul {
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+.mapasajta ul li a {
+  color:var(--ring);
+  text-decoration: none;
+}
+.faq{ 
+  margin-top: 4%;
+  padding: 2em 0;
+}
+.accordion-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.accordion-button.collapsed {
+  background-color: var(--primary);
+  outline: none;
+  border: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary); 
+  color: var(--primary-foreground); /
+  outline: none;
+  border: 0; 
+}
+
+.accordion-header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.accordion-body {
+  background-color: transparent;
+  color: var(--foreground);
+  padding: 10px 15px;
+  border: none;
+}
+
+.accordion-button:focus {
+  outline: none;
+}
+
+
 @media screen and (max-width: 1200px) {
   .hero h1 {
     font-size: 3.5em;
