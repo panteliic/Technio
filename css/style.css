@@ -34,7 +34,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background);
 }
-h1,h2,h3{
+h1,
+h2,
+h3 {
   color: var(--primary);
 }
 .container {
@@ -106,7 +108,7 @@ nav ul {
 .navbar-toggler:focus {
   border: 0;
 }
-.navbar-toggler .line{
+.navbar-toggler .line {
   width: 30px;
   height: 2px;
   background-color: var(--background);
@@ -138,22 +140,22 @@ nav ul {
   border-radius: var(--radius);
   text-decoration: none;
 }
-.after-hero{ 
+.after-hero {
   background-color: var(--border);
   padding: 50px;
   color: var(--background);
 }
 .after-hero div {
   border-right: 2px solid var(--background);
-  text-align: center; 
+  text-align: center;
 }
 .after-hero div:last-child {
   border: 0;
 }
-.after-hero h4{
+.after-hero h4 {
   margin-top: 10px;
 }
-.recommended-section{
+.recommended-section {
   background-color: white;
 }
 .product-card {
@@ -183,7 +185,7 @@ nav ul {
 }
 .add-to-cart:hover {
   opacity: 0.7;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .newsletter {
   padding: 50px 0;
@@ -195,7 +197,7 @@ nav ul {
   gap: 10px;
   margin-top: 10px;
 }
-.newsletter input{
+.newsletter input {
   border: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 10px;
@@ -204,16 +206,16 @@ nav ul {
   background-color: var(--background);
   color: var(--foreground);
 }
-.newsletter button{
+.newsletter button {
   padding: 10px;
   border-radius: var(--radius);
   border: 3px solid var(--primary);
   background-color: var(--primary);
   color: var(--background);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .newsletter button:hover {
-  border-color:var(--border) ;
+  border-color: var(--border);
   background-color: var(--background);
   color: var(--primary);
 }
@@ -246,9 +248,9 @@ footer .col-md-3 {
 footer .social {
   justify-content: space-between;
 }
-footer .social ul{
+footer .social ul {
   display: flex;
-  font-size:2em;
+  font-size: 2em;
   gap: 15px;
 }
 footer .info {
@@ -281,8 +283,61 @@ footer section {
 .onama h1 {
   font-size: 5em;
 }
-.onama p{
-  font-size: 1.2em
+.onama p {
+  font-size: 1.2em;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: 5em;
+  padding: 1em 0;
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.gallery img:hover {
+  filter: brightness(70%);
+}
+.gallery-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #140e38c7;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 999;
+}
+.gallery-overlay.open {
+  display: flex;
+}
+.current-image {
+  width: 80%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+.close-preview {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: var(--background);
+  font-size: 2em;
+  z-index: 1000;
+  cursor: pointer;
+}
+.gallery-overlay .next,
+.gallery-overlay .prev {
+  color: var(--background);
+  font-size: 2em;
+  cursor: pointer;
 }
 @media screen and (max-width: 1200px) {
   .hero h1 {
