@@ -1,11 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korpa</title>
+    <meta
+      name="description"
+      content="Otkrijte najnovije modele mobilnih telefona i uživajte u fantastičnim promocijama i popustima. Posetite našu prodavnicu i pronađite idealan telefon za vas!"
+    />
+    <meta
+      name="keywords"
+      content="najnoviji telefoni, popusti na telefone, mobilni telefoni promocije, akcije telefona, najbolji telefoni 2025"
+    />
+    <meta
+      name="author"
+      content="Nikola Pantelic, nikolais1023@gs.viser.edu.rs"
+    />
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand remove-line" href="#"> technio. </a>
+        <button class="nav-btn mobile">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul>
+          <li>
+            <a href="index.html">Pocetna</a>
+          </li>
+
+          <li>
+            <a href="proizvodi.html">Proizvodi</a>
+          </li>
+
+          <li>
+            <a href="onama.html">O nama</a>
+          </li>
+
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+
+          <li>
+            <a href="galerija.html">Galerija</a>
+          </li>
+          <li>
+            <a href="korpa.html" class="mobile remove-line">
+              <i class="fa-solid fa-cart-shopping"></i>Korpa
+            </a>
+          </li>
+          <li class="close-btn mobile">
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+        </ul>
+        <a class="desktop remove-line" href="korpa.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <div class="cart-counter">3</div>
+        </a>
+      </div>
+    </nav>
+    <main class="korpa">
+      <div class="container">
+        <div class="row">
+          <section class="col-12 col-lg-7 cart-items">
+            <h1>Vaša korpa</h1>
+            <div class="cart-item">
+              <img
+                src="./assets/images/products-images/image66e29624de524.jpg"
+                alt="Product Image"
+              />
+              <h4 class="item-title">Apple iPhone 16 Plus</h4>
+              <div class="counter">
+                <button class="btn-counter">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <h4>1</h4>
+                <button class="btn-counter">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <h4 class="total-items-price">143.990 RSD</h4>
+            </div>
+            <div class="cart-item">
+              <img
+                src="./assets/images/products-images/iphone15.jpg"
+                alt="Product Image"
+              />
+              <h4 class="item-title">APPLE iPhone 15 Plus 6/128GB</h4>
+              <div class="counter">
+                <button class="btn-counter">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <h4>1</h4>
+                <button class="btn-counter">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <h4 class="total-items-price">122.990 RSD</h4>
+            </div>
+            <div class="cart-item">
+              <img
+                src="./assets/images/products-images/samsunga55.jpg"
+                alt="Product Image"
+              />
+              <h4 class="item-title">SAMSUNG Galaxy A55</h4>
+              <div class="counter">
+                <button class="btn-counter">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <h4>1</h4>
+                <button class="btn-counter">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+              <h4 class="total-items-price">47.999 RSD</h4>
+            </div>
+          </section>
+          <section class="col-12 col-lg-5 col-xl-4 price-final">
+            <div class="price-final-header">
+              <h3>Pregled narudžbine</h3>
+              <div>
+                <button class="tooltip-btn">
+                  <i class="fa-solid fa-circle-info"></i>
+                </button>
+                <div class="tooltip-modal">
+                  Za porudžbine iznad 10,000 RSD. Za ostale porudžbine, dostava
+                  se naplaćuje 500 RSD.
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <h4>Iznos kupovine:</h4>
+              <h3>314,979 RSD</h3>
+            </div>
+            <a href="proizvodi.html">Nastavite kupovinu</a>
+            <form>
+              <h4>Promo kod</h4>
+              <div class="red">
+                <input type="text" placeholder="1596548" />
+                <button>Primenite kod</button>
+              </div>
+            </form>
+            <button class="finish">Završite kupovinu</button>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="container row">
+        <section class="col-md-3 social">
+          <a class="navbar-brand" href="#"> technio. </a>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-square-x-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-md-3 links">
+          <h3>Najposeceniji linkovi</h3>
+          <ul>
+            <li><a href="index.html">Pocetna</a></li>
+            <li><a href="proizvodi.html">Proizvodi</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="kontakt.html">Kontakt </a></li>
+          </ul>
+        </section>
+        <section class="col-md-3 links">
+          <h3>Ostali linkovi</h3>
+          <ul>
+            <li><a href="mapasajta.html">Mapa sajta</a></li>
+            <li><a href="faq.html">FaQ</a></li>
+            <li><a href="korpa.html">Korpa</a></li>
+            <li><a href="cenovnik.pdf">Cenovnik</a></li>
+          </ul>
+        </section>
+        <section class="col-md-3 info">
+          <h3>Kontakt</h3>
+          <ul>
+            <li>Adresa: Vojvode Stepe 283</li>
+            <li>Email: info@technio.com</li>
+            <li>Telefon: +381 11 552155</li>
+          </ul>
+        </section>
+      </section>
+      <section class="copyright">
+        &copy; 2024. Technio. Sva prava zadržana. Designed By Nikola Pantelic
+      </section>
+    </footer>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./fontawesome/js/all.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -103,13 +103,28 @@ nav a.active {
 nav a.remove-line:hover::after {
   height: 0;
 }
-
+nav a.remove-line {
+  font-size: 1.5em;
+}
 .nav-btn {
   color: white;
   font-size: 1.5em;
   cursor: pointer;
 }
-
+.cart-counter {
+  background-color: white;
+  color: var(--primary);
+  position: absolute;
+  font-size: 0.7em;
+  width: 3px;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -3px;
+  left:8px;
+}
 .hero {
   align-items: center;
   justify-content: space-between;
@@ -184,6 +199,7 @@ nav a.remove-line:hover::after {
   opacity: 0.7;
   transition: all 0.3s;
 }
+
 .newsletter {
   padding: 50px 0;
   text-align: center;
@@ -276,7 +292,7 @@ footer section {
   margin-top: 8vh;
   margin-bottom: 10px;
 }
-.about-us{ 
+.about-us {
   justify-content: space-between;
 }
 .onama h1 {
@@ -406,7 +422,7 @@ footer section {
   text-decoration: none;
 }
 .faq {
-  margin-top: 4%;
+  margin-top: 4em;
   padding: 2em 0;
 }
 .accordion-button {
@@ -437,6 +453,7 @@ footer section {
   border: none;
   cursor: pointer;
   outline: none;
+  border-radius: var(--radius);
 }
 
 .accordion-body {
@@ -477,6 +494,149 @@ footer section {
   color: var(--primary);
   font-weight: 900;
   text-decoration: none;
+}
+.korpa {
+  margin-top: 5em;
+  padding: 2em;
+}
+.korpa .row {
+  justify-content: space-between;
+  align-items: start;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  max-height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.item-title {
+  font-size: 1.1em;
+  color: var(--foreground);
+  margin: 0;
+  width: 30%;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: var(--radius);
+  padding: 0.4em 1em;
+  background-color: var(--background);
+}
+
+.counter h4 {
+  font-size: 1.4em;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.btn-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: var(--foreground);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.total-items-price {
+  font-size: 1.2em;
+  color: var(--primary);
+  margin: 0;
+}
+.price-final {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: var(--foreground);
+}
+.price-final-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  position: relative;
+}
+
+.price-final .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tooltip-modal {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  background-color: var(--input);
+  color: white;
+  padding: 10px;
+  bottom: -110px;
+  border-radius: var(--radius);
+  display: none;
+}
+
+.tooltip-btn:hover ~ .tooltip-modal {
+  display: block;
+}
+.price-final-header a {
+  color: var(--foreground);
+}
+.price-final form {
+  padding: 1em 0;
+}
+.price-final form .red {
+  display: flex;
+  justify-content: space-between;
+}
+.price-final input,
+.price-final button {
+  border: 3px solid var(--primary);
+  outline: 0;
+  padding: 0.5em 1em;
+  color: var(--foreground);
+  border-radius: var(--radius);
+}
+.price-final input {
+  width: 59%;
+}
+.price-final button {
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.3s;
+  font-size: 1em;
+}
+
+.price-final button:hover {
+  opacity: 0.8;
+}
+.finish {
+  width: 100%;
 }
 @media screen and (max-width: 1200px) {
   .hero h1 {
@@ -540,6 +700,26 @@ footer section {
     border: 0;
     outline: 0;
   }
+  .cart-items {
+    width: 100%;
+  }
+  .korpa {
+    padding: 0;
+  }
+  .cart-item {
+    background-color: transparent;
+    box-shadow: 0 0 0 white;
+    padding: 0;
+    border: 0;
+  }
+  .cart-items,
+  .price-final {
+    border-radius: 0;
+    box-sizing: 0;
+  }
+  .price-final input {
+    width: 79%;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -565,15 +745,58 @@ footer section {
     width: 70%;
   }
   .proizvodi {
-    margin-top: 4em;
+    margin-top: 5em;
   }
   main {
     margin-top: 4em;
+  }
+  footer {
+    width: 100%;
   }
   footer section section {
     padding: 0;
   }
   .about-us {
     gap: 50px;
+  }
+  .copyright {
+    font-size: 1em;
+  }
+  .item-title {
+    font-size: 0.8em;
+  }
+  .cart-item img {
+    width: 60px;
+  }
+  .counter {
+    gap: 10px;
+  }
+  .price {
+    padding: 1em 0;
+  }
+  .total-items-price {
+    font-size: 1em;
+  }
+  .btn-counter {
+    font-size: 1em;
+  }
+  .price-final button {
+    font-size: 0.9em;
+  }
+  .price-final input{
+    width: 69%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .korpa.container {
+    padding: 0;
+  }
+  .price-final input {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .price-final input {
+    width: 57%;
   }
 }
