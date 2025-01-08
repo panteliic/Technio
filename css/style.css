@@ -151,8 +151,9 @@ nav a.remove-line {
   padding: 10px 20px;
   border-radius: var(--radius);
   text-decoration: none;
-  transition: all .3s;
-}.hero .read-more:hover {
+  transition: all 0.3s;
+}
+.hero .read-more:hover {
   opacity: 0.8;
 }
 .after-hero {
@@ -412,7 +413,7 @@ footer section {
 }
 .mapasajta {
   margin-top: 9vh;
-  padding: 2em 0;
+  padding: 2em 1em;
   background-color: var(--background);
 }
 
@@ -445,7 +446,7 @@ footer section {
   color: var(--ring);
   border: none;
   padding: 10px 15px;
-  transition:all .3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -687,7 +688,7 @@ footer section {
   text-align: left;
   gap: 20px;
 }
-.login-form.register-form{
+.login-form.register-form {
   gap: 10px;
 }
 .login-form {
@@ -771,7 +772,7 @@ footer section {
   position: absolute;
   top: 1em;
   left: 1em;
-  color:var(--primary);
+  color: var(--primary);
   text-decoration: none;
 }
 .login-back {
@@ -969,7 +970,7 @@ footer section {
     padding: 0 1em;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .price-final input {
     width: 57%;
   }
