@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prijavi se</title>
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <style>
+    html {
+      overflow: hidden;
+    }
+  </style>
+  <body>
+    <main class="login">
+        <a href="index.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i> Nazad na početnu
+        </a>
+      <div class="login-form">
+        <h1>Napravite novi nalog</h1>
+        <form>
+          <div class="group">
+            <div class="input-group">
+              <label for="firstName">Ime</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Jhon"
+                class="rounded"
+              />
+            </div>
+            <div class="input-group">
+              <label for="lastaName">Prezime</label>
+              <input
+                type="text"
+                name="lastaName"
+                id="lastaName"
+                placeholder="Doe"
+                class="rounded"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="jhon@doe.com"
+              class="rounded"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Lozinka</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="lozinka..."
+              class="rounded"
+            />
+          </div>
+          <div class="input-group">
+            <label for="confirm-password">Potvrdite Lozinku</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="lozinka..."
+              class="rounded"
+            />
+          </div>
+          <button>Prijavite se</button>
+        </form>
+        <div class="red">
+          <div class="line"></div>
+          <span>Registrujte se na drugi način</span>
+          <div class="line"></div>
+        </div>
+        <div class="red google-fb-login">
+          <button><i class="fa-brands fa-google"></i> Google</button>
+          <button><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+        </div>
+        <p class="text-left">
+          Već imate nalog? <a href="login.html">Prijavite se.</a>
+        </p>
+      </div>
+      <div class="login-image">
+        <img src="./assets/images/undraw_login_wqkt.svg" alt="" class="register-image"/>
+      </div>
+    </main>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./fontawesome/js/all.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

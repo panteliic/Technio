@@ -95,7 +95,7 @@ nav a.active::after {
   height: 8px;
   background-color: var(--background);
   left: 0;
-  bottom: -26.1px;
+  bottom: -29.1px;
 }
 nav a.active {
   color: var(--background) !important;
@@ -123,7 +123,7 @@ nav a.remove-line {
   align-items: center;
   border-radius: 50%;
   top: -3px;
-  left:8px;
+  left: 8px;
 }
 .hero {
   align-items: center;
@@ -151,9 +151,12 @@ nav a.remove-line {
   padding: 10px 20px;
   border-radius: var(--radius);
   text-decoration: none;
+  transition: all .3s;
+}.hero .read-more:hover {
+  opacity: 0.8;
 }
 .after-hero {
-  background-color: var(--border);
+  background-color: var(--primary);
   padding: 50px;
   color: var(--background);
 }
@@ -212,7 +215,7 @@ nav a.remove-line {
 }
 .newsletter input,
 .contact input {
-  border: 3px solid var(--border);
+  border: 3px solid var(--primary);
   border-radius: var(--radius);
   padding: 10px;
   width: 350px;
@@ -229,7 +232,7 @@ nav a.remove-line {
   transition: all 0.3s;
 }
 .newsletter button:hover {
-  border-color: var(--border);
+  border-color: var(--primary);
   background-color: var(--background);
   color: var(--primary);
 }
@@ -410,16 +413,45 @@ footer section {
 .mapasajta {
   margin-top: 9vh;
   padding: 2em 0;
+  background-color: var(--background);
 }
-.mapasajta ul {
-  font-size: 1.3em;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+
+.mapasajta h1 {
+  font-size: 3em;
+  color: var(--primary);
 }
-.mapasajta ul li a {
+
+.mapasajta .card {
+  background-color: var(--card);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.mapasajta .card ul {
+  list-style: none;
+}
+
+.mapasajta .card-header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: bold;
+  text-align: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.mapasajta .list-group-item {
+  background-color: transparent;
   color: var(--ring);
-  text-decoration: none;
+  border: none;
+  padding: 10px 15px;
+  transition:all .3s;
+  cursor: pointer;
+}
+
+.mapasajta .list-group-item:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 .faq {
   margin-top: 4em;
@@ -638,12 +670,125 @@ footer section {
 .finish {
   width: 100%;
 }
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+}
+.login-image,
+.login-form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary);
+  text-align: left;
+  gap: 20px;
+}
+
+.login-form {
+  background-color: var(--background);
+}
+.login-form form,
+.login .red {
+  width: 70%;
+}
+.login-form form input,
+.login-form form button {
+  border: 3px solid var(--primary);
+  padding: 10px;
+  border-radius: var(--radius);
+  background-color: var(--background);
+  outline: 0;
+}
+.login-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.login-form form button {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.3s;
+}
+.login-form form button:hover {
+  opacity: 0.8;
+}
+.input-group label {
+  font-size: 1.2em;
+}
+.login-form .red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+.login-form .red span {
+  width: 44%;
+}
+.login-form .red .line {
+  width: 28%;
+  height: 2px;
+  background-color: var(--accent);
+}
+.login-form .red.google-fb-login {
+  gap: 10px;
+}
+.login-form .red button {
+  border: 3px solid var(--primary);
+  padding: 10px;
+  border-radius: var(--radius);
+  background-color: var(--background);
+  width: 50%;
+  color: var(--primary);
+}
+.text-left {
+  text-align: left;
+  width: 70%;
+}
+.login form .group {
+  display: flex;
+  gap: 10px;
+}
+.login form .group .input-group {
+  width: 50%;
+}
+.login form .group .input-group input {
+  width: 100%;
+}
+.register-image {
+  width: 70%;
+}
+.back {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color:var(--primary);
+  text-decoration: none;
+}
+.login-back {
+  color: var(--background);
+}
 @media screen and (max-width: 1200px) {
   .hero h1 {
     font-size: 3.5em;
   }
   .hero p {
     font-size: 1.1em;
+  }
+  .login-image img {
+    width: 80%;
+  }
+  .login-form form,
+  .login .red,
+  .text-left {
+    width: 90%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -720,6 +865,24 @@ footer section {
   .price-final input {
     width: 79%;
   }
+  .login {
+    flex-direction: column;
+  }
+  .login-image {
+    display: none;
+  }
+  .login-form {
+    width: 100%;
+    height: 100vh;
+  }
+  .login-form form,
+  .login-form .red,
+  .text-left {
+    width: 445px;
+  }
+  .login-back {
+    color: var(--primary);
+  }
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -783,8 +946,11 @@ footer section {
   .price-final button {
     font-size: 0.9em;
   }
-  .price-final input{
+  .price-final input {
     width: 69%;
+  }
+  main.login {
+    margin: 0;
   }
 }
 @media screen and (max-width: 450px) {
@@ -793,6 +959,12 @@ footer section {
   }
   .price-final input {
     width: 60%;
+  }
+  .login-form form,
+  .login .red,
+  .text-left {
+    width: 100%;
+    padding: 0 1em;
   }
 }
 @media screen and (max-width: 450px) {
