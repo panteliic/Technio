@@ -687,7 +687,9 @@ footer section {
   text-align: left;
   gap: 20px;
 }
-
+.login-form.register-form{
+  gap: 10px;
+}
 .login-form {
   background-color: var(--background);
 }
