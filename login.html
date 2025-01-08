@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prijavi se</title>
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <style>
+    html {
+      overflow: hidden;
+    }
+  </style>
+  <body>
+    <main class="login">
+      <a href="index.html" class="login-back back">
+        <i class="fa-solid fa-arrow-left"></i> Nazad na početnu
+    </a>
+      <div class="login-image">
+        <img src="./assets/images/undraw_authentication_tbfc.svg" alt="" />
+      </div>
+      <div class="login-form">
+        <h1>Prijavi se</h1>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="jhon@doe.com"
+              class="rounded"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Lozinka</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="lozinka..."
+              class="rounded"
+            />
+            <a href="#">Zaboravili ste lozinku?</a>
+          </div>
+          <button>Prijavite se</button>
+        </form>
+        <div class="red">
+          <div class="line"></div>
+          <span>Prijavite se na drugi način</span>
+          <div class="line"></div>
+        </div>
+        <div class="red google-fb-login">
+          <button><i class="fa-brands fa-google"></i> Google</button>
+          <button><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+        </div>
+        <p class="text-left">
+          Nemate nalog? <a href="register.html">Registrujte se.</a>
+        </p>
+      </div>
+    </main>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./fontawesome/js/all.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
